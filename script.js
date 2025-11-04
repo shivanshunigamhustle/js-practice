@@ -61,7 +61,7 @@ for(let i=1;i<=10;i++){
 }
  let count=0;
 for(let i=1;i<16;i++){
-    let count=0;
+    
     if(i>8){
         count++;
         console.log(i);
@@ -70,23 +70,42 @@ for(let i=1;i<16;i++){
 }
 console.log(`count ki value ${count}`);
 
-let password="shivanshu"
-let pass=prompt("enter the password");
-if(pass===null){
-    console.log("you enter the cancell");
+// let password="shivanshu"
+// let pass=prompt("enter the password");
+// if(pass===null){
+//     console.log("you enter the cancell");
     
-}else{
-    if(pass.trim()===""){
-        console.log("enter the value");
+// }else{
+//     if(pass.trim()===""){
+//         console.log("enter the value");
         
-    }else{
-        if(pass===password){
-            console.log("matched");
+//     }else{
+//         if(pass===password){
+//             console.log("matched");
             
-        }else{
-            console.log("not matched");
+//         }else{
+//             console.log("not matched");
             
-        }
-    }
-}
+//         }
+//     }
+// }
+let attempt=0;
+let khulgaya=false;
+let password="shivanshubhai"
 
+let pass=prompt("enter the password");
+attempt++;
+if(pass===password) khulgaya=true;
+
+while(pass!==password){
+    if(attempt===3){
+        console.error("locked");
+        break;
+        
+    }
+     pass=prompt("enter the password");
+     if(pass===password) khulgaya=true;
+     attempt++;
+
+}
+if(khulgaya===true)console.log("lock opened");
