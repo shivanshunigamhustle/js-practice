@@ -55,20 +55,20 @@ let age = prompt("enter the age");
         }
     }
 }
-for(let i=1;i<=10;i++){
-   console.log(`5*${i}=${5*i}`);
+// for(let i=1;i<=10;i++){
+//    console.log(`5*${i}=${5*i}`);
    
-}
- let count=0;
-for(let i=1;i<16;i++){
+// }
+//  let count=0;
+// for(let i=1;i<16;i++){
     
-    if(i>8){
-        count++;
-        console.log(i);
-        // console.log(`count ki value ${count}`);
-    }
-}
-console.log(`count ki value ${count}`);
+//     if(i>8){
+//         count++;
+//         console.log(i);
+//         // console.log(`count ki value ${count}`);
+//     }
+// }
+// console.log(`count ki value ${count}`);
 
 // let password="shivanshu"
 // let pass=prompt("enter the password");
@@ -89,23 +89,62 @@ console.log(`count ki value ${count}`);
 //         }
 //     }
 // }
-let attempt=0;
-let khulgaya=false;
-let password="shivanshubhai"
+// let attempt=0;
+// let khulgaya=false;
+// let password="shivanshubhai"
 
-let pass=prompt("enter the password");
-attempt++;
-if(pass===password) khulgaya=true;
+// let pass=prompt("enter the password");
+// attempt++;
+// if(pass===password) khulgaya=true;
 
-while(pass!==password){
-    if(attempt===3){
-        console.error("locked");
-        break;
+// while(pass!==password){
+//     if(attempt===3){
+//         console.error("locked");
+//         break;
+        
+//     }
+//      pass=prompt("enter the password");
+//      if(pass===password) khulgaya=true;
+//      attempt++;
+
+// }
+// if(khulgaya===true)console.log("lock opened");
+
+// let word=prompt("give the word");
+// let count=0;
+
+// while(word!=="stop"){
+//     if(word==="yes")count++;
+//      word=prompt("give the word");
+//     }
+//     console.log(`counter ki value :${count}`);
+    
+let sum=0;
+for(let i=1;i<31;i++){
+    if(i%2===1){
+        sum+=i;
+        console.log(i);
         
     }
-     pass=prompt("enter the password");
-     if(pass===password) khulgaya=true;
-     attempt++;
+}
+console.log(`sum of odd number: ${sum}`);
+
+let num=+prompt("number batao");
+
+while(num%2!==0){
+    num=+prompt("number batao");
 
 }
-if(khulgaya===true)console.log("lock opened");
+if(num%2===0)console.log("done");
+
+//start end input
+
+let start =+prompt("giving a starting number");
+let end=+prompt("ending batao");
+
+while(start>end)console.error("wrong number");
+
+for(let i=start;i<=end;i++){
+    console.log(i);
+    
+}
